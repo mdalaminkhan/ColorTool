@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Color Tool | Al-Amin Khan</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/jquery-ui.css">
+	<link rel="stylesheet" href="./css/fw.min.css">
+	<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+	<div class="first-container">
+		<div class="row c-relative-100 h-100">
+			<div class="col-6 pr-0">
+				<h2 id="contrastH2" class="contrast-label d-inline text-gray-dark mr-0 p-2 pb-3 float-right">Contrast</h2>
+				<form id="form1" class="clearfix" action="#">
+					<input onclick="this.setSelectionRange(0, this.value.length);" type="text" value="rgb(0, 0, 0)" class="color-input float-right text-left mr-4 form-control-lg" name="color1" id="colInput1">
+					<button type="button" class="btn btn-info btn-swap-col">
+						<i class="fa fa-exchange" aria-hidden="true"></i>
+					</button>
+				</form>
+				<div id="instructionDiv1" class="col-lg-7 col-md-9 col-sm-12 text-right mt-md-5 mt-sm-2 ml-auto mr-md-5 mr-sm-1">
+					<h2>How to Use</h2>
+					<p>
+						Just type any valid css color in any of the input fields or select any of top 256 colors inspired by Google, Contrast Ratio will be calculated automatically between foreground and background color.
+					</p>
+				</div>
+			</div>
+			
+			<div id="outDiv" class="c-result d-block font-weight-bold bg-success">
+				<div id="contrastRatioTooltip" class="cr-collout"></div>
+				<span id="outDivResult">0.0</span>
+			</div>
+			<div id="transparencyWarning" class="tw-collout bg-danger">Transparency value has been detected in your given color/s. Contrast ratio can't be effectively calculated with transparent color. Here, Contrast Ratio is calculated only with color values but not transparency values.</div>
+			<div class="col-6 pl-0">
+				<h2 id="ratioH2" class="ratio-label d-inline text-light ml-0 p-2 pb-3 float-left">Ratio</h2>
+				<form id="form2" class="clearfix" action="#">
+					<input onclick="this.setSelectionRange(0, this.value.length);" type="text" value="white" class="color-input float-left text-right ml-4 form-control-lg" name="color2" id="colInput2">
+					<button type="button" class="btn btn-info btn-swap-col">
+						<i class="fa fa-exchange" aria-hidden="true"></i>
+					</button>
+				</form>
+				<div id="instructionDiv2" class="col-lg-7 col-md-9 col-sm-12 text-left mt-md-5 mt-sm-2 mr-auto ml-md-5 ml-sm-1">
+					<h2>How it Works</h2>
+					<p>
+						This app calculates Contrast Ratio between text and its background color based on the procedure and formula specified by <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG</a>.
+						This app also designed using JavaScript, Bootstrap, Font Awesome and jQueryUI.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="socialBlock" class="">
+			<ul class="social-network social-circle">
+                <li><a href="https://github.com/mdalaminkhan/ColorTool" class="icoGithub" title="GitHub"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://facebook.com/mdalaminkhan" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.youtube.com/c/MdAlAminKhanBD" class="icoYoutube" title="Youtube"><i class="fa fa-youtube-play"></i></a></li>
+                <li><a href="https://plus.google.com/u/0/+MdAlAminKhanBD" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/alaminkhan/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+		</div>
+	</div>
+
+	<script src="./js/jquery-1.12.4.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/color.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/script-1.js"></script>
+	<script src="./js/script-2.js"></script>
+</body>
+</html>
